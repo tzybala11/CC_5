@@ -9,3 +9,11 @@ let employees = [
 ];
 
 console.log(employees);
+
+// Step 3
+function calculateBasePay(rate, hours) {
+    return rate * hours
+}
+
+let pay = calculateBasePay(40, 20.00);
+console.log(pay);
