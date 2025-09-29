@@ -1,14 +1,14 @@
 // Coding Challenge 5
 
 // Step 2
-let employees = [
+let employee = [
     {name: "Bob",hourlyRate: 20.00,hoursWorked: 40},
     {name: "Bill",hourlyRate: 18.50,hoursWorked: 32},
     {name: "Dale",hourlyRate: 22.50,hoursWorked: 40},
     {name: "Randy",hourlyRate: 17.00,hoursWorked: 20}
 ];
 
-console.log(employees);
+console.log(employee);
 
 // Step 3
 function calculateBasePay(rate, hours) {
@@ -31,9 +31,25 @@ let overtimePay = calculateOvertimePay(20.00, 45);
 console.log(overtimePay);
 
 // Step 5
-function calculateTaxes(grosspay) {
-    return grosspay * 0.85 // 15% tax
+let grossPay = basePay + overtimePay;
+
+function calculateTaxes(grossPay) {
+    return grossPay * 0.85 // 15% tax
 };
 
-let grosspay = calculateTaxes(800);
-console.log(grosspay);
+let netPay = calculateTaxes(800);
+console.log(netPay);
+
+// Step 6
+function processPayroll(employee) {
+    return {
+        name,
+        basePay,
+        overtimePay,
+        grossPay,
+        netPay
+    }
+};
+
+let processedPayroll = processPayroll();
+console.log(processedPayroll);
