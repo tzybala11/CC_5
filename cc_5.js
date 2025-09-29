@@ -53,3 +53,8 @@ function processPayroll(employee) {
 
 let processedPayroll = processPayroll();
 console.log(processedPayroll);
+
+// Step 7
+for (const person of employee) {
+    
+}
